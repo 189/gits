@@ -1,7 +1,7 @@
 {
-  "name": "gits",
+  "name": "@btboy/gits",
   "version": "0.0.0",
-  "description": "",
+  "description": "Test autopublish",
   "keywords": [],
   "main": "dist/gits.umd.js",
   "module": "dist/gits.es5.js",
@@ -9,10 +9,10 @@
   "files": [
     "dist"
   ],
-  "author": "wangshangwen <wangshangwen>",
+  "author": "wangshangwen <shangwenwang20@gmail.com>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git@github.com:189/gits.git"
   },
   "license": "MIT",
   "engines": {
