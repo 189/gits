@@ -1,6 +1,7 @@
-// Import here Polyfills if needed. Recommended core-js (npm i -D core-js)
-  // import "core-js/fn/array.find"
-  // ...
-export default class DummyClass {
+interface Params {
+  [key: string]: any;
+}
 
+export default function Hi(params: Params) {
+  console.log(params);
 }

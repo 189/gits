@@ -1,14 +1,11 @@
-import DummyClass from "../src/gits"
+import Hi from "../src/gits";
 
 /**
  * Dummy test
  */
-describe("Dummy test", () => {
-  it("works if true is truthy", () => {
-    expect(true).toBeTruthy()
-  })
-
-  it("DummyClass is instantiable", () => {
-    expect(new DummyClass()).toBeInstanceOf(DummyClass)
-  })
-})
+describe("Test Hi", () => {
+  it("works if input equal to output", () => {
+    const params = {};
+    expect(Hi(params)).toBe(params);
+  });
+});
