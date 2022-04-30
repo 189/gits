@@ -1,6 +1,6 @@
 {
   "name": "@btboy/gits",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Test autopublish",
   "keywords": [],
   "main": "dist/gits.umd.js",
