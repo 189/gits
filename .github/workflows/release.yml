@@ -22,7 +22,7 @@ jobs:
           git config user.email "<>"
       - name: Update Changelog
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
         run: |
           npx standard-version
           git push --follow-tags origin main
