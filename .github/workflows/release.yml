@@ -16,18 +16,18 @@ jobs:
         with:
           node-version: "16.x"
           registry-url: "https://registry.npmjs.org"
-      # - name: Setup git config
-      #   run: |
-      #     git config user.name "GitHub Actions Bot"
-      #     git config user.email "<>"
-      # - name: Update Changelog
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
-      #   run: |
-      #     npx standard-version
-      #     git push --follow-tags origin main
-      - run: npm install
-      - run: npm run build
-      - run: npm publish --access public
+          scope: "@btboy"
+      - name: Setup git config
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<shangwenwang20@gmail.com>"
+      - name: Update Changelog
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npx standard-version
+          git push --follow-tags origin main
+      # - run: yarn
+      # - run: yarn publish --access public
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
