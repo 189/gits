@@ -12,7 +12,7 @@
   "author": "wangshangwen <shangwenwang20@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/189/gits"
+    "url": "https://github.com/189/gits.git"
   },
   "license": "MIT",
   "engines": {

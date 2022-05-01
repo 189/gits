@@ -26,7 +26,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
         run: |
-          echo $GITHUB_TOKEN
           npx standard-version
           git push --follow-tags origin main
       # - uses: actions/checkout@v3
