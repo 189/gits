@@ -10,10 +10,6 @@
     "dist"
   ],
   "author": "wangshangwen <shangwenwang20@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/189/gits.git"
-  },
   "license": "MIT",
   "engines": {
     "node": ">=6.0.0"
