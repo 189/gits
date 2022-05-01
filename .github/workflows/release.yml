@@ -26,8 +26,8 @@ jobs:
       #   run: |
       #     npx standard-version
       #     git push --follow-tags origin main
-      - run: yarn
-      - run: yarn build
-      - run: yarn publish --access public
+      - run: npm install
+      - run: npm run build
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
