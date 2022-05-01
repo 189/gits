@@ -10,22 +10,40 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      # Setup .npmrc file to publish to npm
-      - uses: actions/setup-node@v3
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
-          node-version: "16.x"
-          registry-url: "https://registry.npmjs.org"
+          fetch-depth: 0
+      - name: Setup Node.jobs
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
       - name: Setup git config
         run: |
           git config user.name "GitHub Actions Bot"
-          git config user.email "<shangwenwang20@gmail.com>"
+          git config user.email "<>"
       - name: Update Changelog
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           npx standard-version
           git push --follow-tags origin main
+      # - uses: actions/checkout@v3
+      # # Setup .npmrc file to publish to npm
+      # - uses: actions/setup-node@v3
+      #   with:
+      #     node-version: "16.x"
+      #     registry-url: "https://registry.npmjs.org"
+      # - name: Setup git config
+      #   run: |
+      #     git config user.name "GitHub Actions Bot"
+      #     git config user.email "<shangwenwang20@gmail.com>"
+      # - name: Update Changelog
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   run: |
+      #     npx standard-version
+      #     git push --follow-tags origin main
       # - run: yarn
       # - run: yarn publish --access public
       #   env:
